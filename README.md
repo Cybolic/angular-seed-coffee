@@ -1,6 +1,7 @@
 # angular-seed — the seed for AngularJS apps
 
-This project is an application skeleton for a typical [AngularJS](http://angularjs.org/) web app.
+This project is a CoffeeScript port of the application skeleton for a typical [AngularJS](http://angularjs.org/)
+web app.
 You can use it to quickly bootstrap your angular webapp projects and dev environment for these
 projects.
 
@@ -88,7 +89,7 @@ CloudBees have provided a CI/deployment setup:
 
 <a href="https://grandcentral.cloudbees.com/?CB_clickstart=https://raw.github.com/CloudBees-community/angular-js-clickstart/master/clickstart.json"><img src="https://d3ko533tu1ozfq.cloudfront.net/clickstart/deployInstantly.png"/></a>
 
-If you run this, you will get a cloned version of this repo to start working on in a private git repo, 
+If you run this, you will get a cloned version of this repo to start working on in a private git repo,
 along with a CI service (in Jenkins) hosted that will run unit and end to end tests in both Firefox and Chrome.
 
 ### Receiving updates from upstream
