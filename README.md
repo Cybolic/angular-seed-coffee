@@ -30,7 +30,7 @@ Clone the angular-seed repository and start hacking...
 You can pick one of these options:
 
 * serve this repository with your webserver
-* install node.js and run `scripts/web-server.js`
+* install node.js and coffeescript then run `scripts/web-server.coffee`
 
 Then navigate your browser to `http://localhost:<port>/app/index.html` to see the app running in
 your browser.
