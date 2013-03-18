@@ -106,12 +106,12 @@ fetch the changes and merge them into your project with git.
       img/              --> image files
       index.html        --> app layout file (the main html template file of the app)
       index-async.html  --> just like index.html, but loads js files asynchronously
-      js/               --> javascript files
-        app.js          --> application
-        controllers.js  --> application controllers
-        directives.js   --> application directives
-        filters.js      --> custom angular filters
-        services.js     --> custom angular services
+      coffee/           --> coffeescript files
+        app.coffee          --> application
+        controllers.coffee  --> application controllers
+        directives.coffee   --> application directives
+        filters.coffee      --> custom angular filters
+        services.coffee     --> custom angular services
       lib/              --> angular and 3rd party javascript libraries
         angular/
           angular.js        --> the latest angular js
@@ -131,6 +131,7 @@ fetch the changes and merge them into your project with git.
       test.bat          --> autotests unit tests with Testacular (windows)
       test.sh           --> autotests unit tests with Testacular (*nix)
       web-server.js     --> simple development webserver based on node.js
+      web-server.coffee --> simple development webserver based on node.js, coffeescript version
 
     test/               --> test source files and libraries
       e2e/              -->
