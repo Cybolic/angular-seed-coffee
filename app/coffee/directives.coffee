@@ -3,9 +3,9 @@
 ### Directives ###
 
 app_name = "myApp"
-self = angular.module("#{app_name}.directives", [])
+app = angular.module "#{app_name}.directives", []
 
-self.directive 'appVersion', [
+app.directive 'appVersion', [
   'version', (version) ->
     (scope, element, attrs) ->
       element.text version
@@ -16,7 +16,7 @@ window.stoppingPropagation = (callback) -> (event) ->
   event.stopPropagation()
   callback(event)
 
-self.directive 'ngTap', ->
+app.directive 'ngTap', ->
   (scope, element, attrs) ->
     tapping = false
     element.bind 'touchstart', stoppingPropagation (event) -> tapping = true
