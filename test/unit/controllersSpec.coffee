@@ -8,16 +8,15 @@ describe 'Controllers', ->
   beforeEach module app_name
 
   describe 'myCtrl1', ->
-
-    scope = {}
-    ctrl = null
+    scope = {}; ctrl = null
     beforeEach inject ($controller) ->
       ctrl = $controller 'myCtrl1', {$scope: scope}
 
-    it 'should ....', ->
+    it 'should have a name variable and a say function defined', ->
       expect(
         scope.name
       ).toMatch /view 1/
+
       expect(
         scope.say
       ).toBeDefined()
@@ -26,8 +25,7 @@ describe 'Controllers', ->
   describe 'myCtrl2', ->
     myCtrl2 = null
 
-    scope = {}
-    ctrl = null
+    scope = {}; ctrl = null
     beforeEach inject ($controller) ->
       ctrl = $controller 'myCtrl2', {$scope: scope}
 
