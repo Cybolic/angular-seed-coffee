@@ -1,0 +1,30 @@
+{
+  "name": "angular-seed-coffee",
+  "version": "0.0.1",
+  "description": "Seed project for angular apps written in CoffeeScript.",
+  "main": "app/index.html",
+  "dependencies": {
+    "uglify-js": ">=2.x"
+  },
+  "devDependencies": {},
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "scripts/test.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Cybolic/angular-seed-coffee.git"
+  },
+  "keywords": [
+    "angular",
+    "angular.js",
+    "coffeescript",
+    "coffee-script"
+  ],
+  "author": "Christian Dannie Storgaard and the Angular.JS authors",
+  "license": "MIT",
+  "gitHead": "4677ee495fba3e4c0cf0f77d4f95db8dab68a63e",
+  "readmeFilename": "README.md"
+}

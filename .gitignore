@@ -2,6 +2,8 @@
 nbproject
 manifest.mf
 build.xml
+node_modules
+app/js
 
 .project
 .settings

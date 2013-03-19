@@ -9,6 +9,7 @@
   </style>
   <title>My AngularJS App</title>
   <link rel="stylesheet" href="css/app.css"/>
+  <script src="lib/coffeescript/coffeescript.min.js"></script>
 </head>
 <body ng-cloak>
   <ul class="menu">
@@ -20,8 +21,14 @@
 
   <div>Angular seed app: v<span app-version></span></div>
 
+  <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.min.js"></script>
-  <script>window.angular==null&&(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='lib/angular/angular.min.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
-  <script src="js/app.min.js"></script>
+  -->
+  <script src="lib/angular/angular.js"></script>
+  <script type="text/coffeescript" src="coffee/services.coffee"></script>
+  <script type="text/coffeescript" src="coffee/controllers.coffee"></script>
+  <script type="text/coffeescript" src="coffee/filters.coffee"></script>
+  <script type="text/coffeescript" src="coffee/directives.coffee"></script>
+  <script type="text/coffeescript" src="coffee/app.coffee"></script>
 </body>
 </html>
