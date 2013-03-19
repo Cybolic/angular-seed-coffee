@@ -31,6 +31,11 @@ task 'build', 'Build a single minified JavaScript file from the source CoffeeScr
       process() if (--remaining) is 0
 
   process = ->
+    # create output dir
+    try
+      fs.mkdirSync dstDirJS
+    catch err
+      # don't care if it fails (probably exists)
     fs.writeFile dstFileCoffee, appContents.join('\n\n'), 'utf8', (err) ->
       handleError(err) if err
 
