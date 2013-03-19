@@ -3,15 +3,14 @@ basePath = '../';
 files = [
   ANGULAR_SCENARIO,
   ANGULAR_SCENARIO_ADAPTER,
-  //'app/lib/coffeescript/*.js',
-  'test/e2e/**/*.coffee'
+  'test/e2e/*.coffee'
 ];
 
-autoWatch = false;
+autoWatch = true;
 
 browsers = ['Chrome'];
 
-singleRun = true;
+singleRun = false;
 
 proxies = {
   '/': 'http://localhost:8000/'

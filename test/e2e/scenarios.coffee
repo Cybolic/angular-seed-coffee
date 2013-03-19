@@ -2,9 +2,10 @@
 
 ### http://docs.angularjs.org/guide/dev_guide.e2e-testing ###
 
-describe 'my app', ->
+describe 'my app', =>
 
-  beforeEach -> browser().navigateTo '../../app/index.html'
+  beforeEach ->
+    browser().navigateTo '../../app/index.html'
 
   it 'should automatically redirect to /view1 when location hash/fragment is empty', ->
     expect(

@@ -3,9 +3,9 @@
 ### Filters ###
 
 app_name = "myApp"
-module = angular.module("#{app_name}.filters", [])
+self = angular.module("#{app_name}.filters", [])
 
-module.filter 'interpolate', [
+self.filter 'interpolate', [
   'version', (version) ->
     (text) ->
       String(text).replace /\%VERSION\%/mg, version

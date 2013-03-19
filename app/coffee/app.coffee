@@ -3,9 +3,9 @@
 ### Declare app level module which depends on filters, and services ###
 
 app_name = "myApp"
-module = angular.module(app_name, ["#{app_name}.filters", "#{app_name}.services", "#{app_name}.directives", "#{app_name}.controllers"])
+self = angular.module(app_name, ["#{app_name}.filters", "#{app_name}.services", "#{app_name}.directives", "#{app_name}.controllers"])
 
-module.config ['$routeProvider', ($routeProvider) =>
+self.config ['$routeProvider', ($routeProvider) =>
 
   $routeProvider.when '/view1',
     templateUrl: 'partials/partial1.html'

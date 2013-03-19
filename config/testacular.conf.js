@@ -6,8 +6,12 @@ files = [
   'app/lib/angular/angular.js',
   'app/lib/angular/angular-*.js',
   'test/lib/angular/angular-mocks.js',
-  'app/js/**/*.js',
-  'test/unit/**/*.js'
+  'test/**/*Spec.coffee',
+  'app/coffee/services.coffee',
+  'app/coffee/controllers.coffee',
+  'app/coffee/filters.coffee',
+  'app/coffee/directives.coffee',
+  'app/coffee/app.coffee',
 ];
 
 autoWatch = true;
