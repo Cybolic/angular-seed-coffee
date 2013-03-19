@@ -125,7 +125,7 @@ fetch the changes and merge them into your project with git.
     config/testacular.conf.js        --> config file for running unit tests with Testacular
     config/testacular-e2e.conf.js    --> config file for running e2e tests with Testacular
 
-    scripts/             --> handy shell/js/ruby scripts
+    scripts/             --> handy shell/coffeescript/ruby scripts
       e2e-test.sh        --> runs end-to-end tests with Testacular (*nix)
       e2e-test.bat       --> runs end-to-end tests with Testacular (windows)
       test.bat           --> autotests unit tests with Testacular (windows)
