@@ -23,7 +23,7 @@ etc to function properly when an html page is opened via `file://` scheme instea
 
 ## How to use angular-seed
 
-Clone the angular-seed repository and start hacking...
+Clone the angular-seed-coffee repository and start hacking...
 
 
 ### Running the app during development
@@ -33,8 +33,10 @@ You can pick one of these options:
 * serve this repository with your webserver
 * install node.js and coffeescript then run `scripts/web-server.coffee`
 
-Then navigate your browser to `http://localhost:<port>/app/index.html` to see the app running in
+Then navigate your browser to `http://localhost:<port>/app/test-index.html` to see the app running in
 your browser.
+If you prefer asynchronous loading, navigate to `http://localhost:<port>/app/test-index-async.html`
+instead.
 
 
 ### Running the app in production
@@ -43,11 +45,12 @@ This really depends on how complex is your app and the overall infrastructure of
 the general rule is that all you need in production are all the files under the `app/` directory.
 Everything else should be omitted.
 
-Do note that CoffeeScript shouldn't generally be distributed and you will therefore likely need to
-add a build step to serve js files instead.
-
 Angular apps are really just a bunch of static html, css and js files that just need to be hosted
 somewhere, where they can be accessed by browsers.
+
+Since CoffeeScript shouldn't generally be distributed publicly, a small build script is included
+that will join the CoffeeScript files, compile them to JavaSscript and minify the result.
+To try it out, run `cake build` and navigate to `http://localhost:<port>/app/index.html`
 
 If your Angular app is talking to the backend server via xhr or other means, you need to figure
 out what is the best way to host the static files to comply with the same origin policy if
@@ -74,31 +77,24 @@ or remote browser.
 Angular ships with a baked-in end-to-end test runner that understands angular, your app and allows
 you to write your tests with jasmine-like BDD syntax.
 
-Requires a webserver, node.js + `./scripts/web-server.js` or your backend server that hosts the angular static files.
+Requires a webserver, node.js + `./scripts/web-server.coffee` or your backend server that hosts the
+angular static files.
 
 Check out the
 [end-to-end runner's documentation](http://docs.angularjs.org/guide/dev_guide.e2e-testing) for more
 info.
 
-* create your end-to-end tests in `test/e2e/scenarios.js`
-* serve your project directory with your http/backend server or node.js + `scripts/web-server.js`
+* create your end-to-end tests in `test/e2e/scenarios.coffee`
+* serve your project directory with your http/backend server or node.js + `scripts/web-server.coffee`
 * to run do one of:
   * open `http://localhost:port/test/e2e/runner.html` in your browser
   * run the tests from console with [Testacular](vojtajina.github.com/testacular) via
     `scripts/e2e-test.sh` or `script/e2e-test.bat`
 
-### Continuous Integration
-
-CloudBees have provided a CI/deployment setup:
-
-<a href="https://grandcentral.cloudbees.com/?CB_clickstart=https://raw.github.com/CloudBees-community/angular-js-clickstart/master/clickstart.json"><img src="https://d3ko533tu1ozfq.cloudfront.net/clickstart/deployInstantly.png"/></a>
-
-If you run this, you will get a cloned version of this repo to start working on in a private git repo,
-along with a CI service (in Jenkins) hosted that will run unit and end to end tests in both Firefox and Chrome.
 
 ### Receiving updates from upstream
 
-When we upgrade angular-seed's repo with newer angular or testing library code, you can just
+When angular-seed-coffee's repo is upgraded with newer angular or testing library code, you can just
 fetch the changes and merge them into your project with git.
 
 
@@ -116,6 +112,7 @@ fetch the changes and merge them into your project with git.
         directives.coffee   --> application directives
         filters.coffee      --> custom angular filters
         services.coffee     --> custom angular services
+      js/                --> where compiled javascript will be put by the build script
       lib/               --> angular and 3rd party javascript libraries
         angular/
           angular.js        --> the latest angular js
