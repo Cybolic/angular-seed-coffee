@@ -1,7 +1,8 @@
-# angular-seed — the seed for AngularJS apps
+# angular-seed-coffee — the seed for AngularJS apps in CoffeeScript
 
 This project is a CoffeeScript port of the application skeleton for a typical [AngularJS](http://angularjs.org/)
-web app.
+web app. This port also fixes a number of issues and bugs in the original angular-seed and should be
+ready for use straight away.
 You can use it to quickly bootstrap your angular webapp projects and dev environment for these
 projects.
 
@@ -41,6 +42,9 @@ your browser.
 This really depends on how complex is your app and the overall infrastructure of your system, but
 the general rule is that all you need in production are all the files under the `app/` directory.
 Everything else should be omitted.
+
+Do note that CoffeeScript shouldn't generally be distributed and you will therefore likely need to
+add a build step to serve js files instead.
 
 Angular apps are really just a bunch of static html, css and js files that just need to be hosted
 somewhere, where they can be accessed by browsers.
