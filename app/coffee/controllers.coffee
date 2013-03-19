@@ -2,12 +2,12 @@
 
 ### Controllers ###
 
+app_name = "myApp"
+module = angular.module("#{app_name}.controllers", [])
 
-window.controllers =
-  'myCtrl1': ['$scope', ($scope) ->
+module.controller 'myCtrl1', ['$scope', ($scope) ->
     $scope.name = "view 1"
+    $scope.say = -> window.alert.apply window, arguments
   ]
-  'myCtrl2': ['$scope', ($scope) -> ]
-  'init': (module) ->
-    for controller, definition of controllers
-      module.controller controller, definition
+
+module.controller 'myCtrl2', ['$scope', ($scope) -> ]

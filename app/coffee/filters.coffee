@@ -2,10 +2,11 @@
 
 ### Filters ###
 
+app_name = "myApp"
+module = angular.module("#{app_name}.filters", [])
 
-angular.module('myApp.filters', [])
-  .filter 'interpolate', [
-    'version', (version) ->
-      (text) ->
-        String(text).replace /\%VERSION\%/mg, version
-  ]
+module.filter 'interpolate', [
+  'version', (version) ->
+    (text) ->
+      String(text).replace /\%VERSION\%/mg, version
+]

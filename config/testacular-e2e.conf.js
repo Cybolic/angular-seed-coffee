@@ -3,7 +3,8 @@ basePath = '../';
 files = [
   ANGULAR_SCENARIO,
   ANGULAR_SCENARIO_ADAPTER,
-  'test/e2e/**/*.js'
+  //'app/lib/coffeescript/*.js',
+  'test/e2e/**/*.coffee'
 ];
 
 autoWatch = false;

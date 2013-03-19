@@ -2,10 +2,23 @@
 
 ### Directives ###
 
+app_name = "myApp"
+module = angular.module("#{app_name}.directives", [])
 
-angular.module('myApp.directives', [])
-  .directive 'appVersion', [
-    'version', (version) ->
-      (scope, elm, attrs) ->
-        elm.text version
-  ]
+module.directive 'appVersion', [
+  'version', (version) ->
+    (scope, element, attrs) ->
+      element.text version
+]
+
+# From https://gist.github.com/geelen/2873603
+window.stoppingPropagation = (callback) -> (event) ->
+  event.stopPropagation()
+  callback(event)
+
+module.directive 'ngTap', ->
+  (scope, element, attrs) ->
+    tapping = false
+    element.bind 'touchstart', stoppingPropagation (event) -> tapping = true
+    element.bind 'touchmove' , stoppingPropagation (event) -> tapping = false
+    element.bind 'touchend'  , stoppingPropagation (event) -> scope.$apply(attrs['ngTap']) if tapping
